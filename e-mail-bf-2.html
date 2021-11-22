@@ -1,0 +1,780 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="pt-BR" style="background-color:#f5f5f5" xml:lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml">
+<head>
+	<link href="../../css/app.css" rel="stylesheet" type="text/css" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={licenseKey:"aece2c08f5",applicationID:"22912202"};window.NREUM||(NREUM={}),__nr_require=function(e,t,n){function r(n){if(!t[n]){var i=t[n]={exports:{}};e[n][0].call(i.exports,function(t){var i=e[n][1][t];return r(i||t)},i,i.exports)}return t[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(e,t,n){function r(){}function i(e,t,n){return function(){return o(e,[u.now()].concat(c(arguments)),t?null:this,n),t?void 0:this}}var o=e("handle"),a=e(6),c=e(7),f=e("ee").get("tracer"),u=e("loader"),s=NREUM;"undefined"==typeof window.newrelic&&(newrelic=s);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],p="api-",l=p+"ixn-";a(d,function(e,t){s[t]=i(p+t,!0,"api")}),s.addPageAction=i(p+"addPageAction",!0),s.setCurrentRouteName=i(p+"routeName",!0),t.exports=newrelic,s.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(e,t){var n={},r=this,i="function"==typeof t;return o(l+"tracer",[u.now(),e,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return t.apply(this,arguments)}catch(e){throw f.emit("fn-err",[arguments,this,e],n),e}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(e,t){m[t]=i(l+t)}),newrelic.noticeError=function(e,t){"string"==typeof e&&(e=new Error(e)),o("err",[e,u.now(),!1,t])}},{}],2:[function(e,t,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=e(8);t.exports=r,t.exports.offset=a,t.exports.getLastTimestamp=i},{}],3:[function(e,t,n){function r(e,t){var n=e.getEntries();n.forEach(function(e){"first-paint"===e.name?d("timing",["fp",Math.floor(e.startTime)]):"first-contentful-paint"===e.name&&d("timing",["fcp",Math.floor(e.startTime)])})}function i(e,t){var n=e.getEntries();n.length>0&&d("lcp",[n[n.length-1]])}function o(e){e.getEntries().forEach(function(e){e.hadRecentInput||d("cls",[e])})}function a(e){if(e instanceof m&&!g){var t=Math.round(e.timeStamp),n={type:e.type};t<=p.now()?n.fid=p.now()-t:t>p.offset&&t<=Date.now()?(t-=p.offset,n.fid=p.now()-t):t=p.now(),g=!0,d("timing",["fi",t,n])}}function c(e){d("pageHide",[p.now(),e])}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var f,u,s,d=e("handle"),p=e("loader"),l=e(5),m=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){f=new PerformanceObserver(r);try{f.observe({entryTypes:["paint"]})}catch(v){}u=new PerformanceObserver(i);try{u.observe({entryTypes:["largest-contentful-paint"]})}catch(v){}s=new PerformanceObserver(o);try{s.observe({type:"layout-shift",buffered:!0})}catch(v){}}if("addEventListener"in document){var g=!1,y=["click","keydown","mousedown","pointerdown","touchstart"];y.forEach(function(e){document.addEventListener(e,a,!1)})}l(c)}},{}],4:[function(e,t,n){function r(e,t){if(!i)return!1;if(e!==i)return!1;if(!t)return!0;if(!o)return!1;for(var n=o.split("."),r=t.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}t.exports={agent:i,version:o,match:r}},{}],5:[function(e,t,n){function r(e){function t(){e(a&&document[a]?document[a]:document[i]?"hidden":"visible")}"addEventListener"in document&&o&&document.addEventListener(o,t,!1)}t.exports=r;var i,o,a;"undefined"!=typeof document.hidden?(i="hidden",o="visibilitychange",a="visibilityState"):"undefined"!=typeof document.msHidden?(i="msHidden",o="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(i="webkitHidden",o="webkitvisibilitychange",a="webkitVisibilityState")},{}],6:[function(e,t,n){function r(e,t){var n=[],r="",o=0;for(r in e)i.call(e,r)&&(n[o]=t(r,e[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],7:[function(e,t,n){function r(e,t,n){t||(t=0),"undefined"==typeof n&&(n=e?e.length:0);for(var r=-1,i=n-t||0,o=Array(i<0?0:i);++r<i;)o[r]=e[t+r];return o}t.exports=r},{}],8:[function(e,t,n){t.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(e,t,n){function r(){}function i(e){function t(e){return e&&e instanceof r?e:e?f(e,c,o):o()}function n(n,r,i,o){if(!p.aborted||o){e&&e(n,r,i);for(var a=t(i),c=v(n),f=c.length,u=0;u<f;u++)c[u].apply(a,r);var d=s[w[n]];return d&&d.push([b,n,r,a]),a}}function l(e,t){h[e]=v(e).concat(t)}function m(e,t){var n=h[e];if(n)for(var r=0;r<n.length;r++)n[r]===t&&n.splice(r,1)}function v(e){return h[e]||[]}function g(e){return d[e]=d[e]||i(n)}function y(e,t){u(e,function(e,n){t=t||"feature",w[n]=t,t in s||(s[t]=[])})}var h={},w={},b={on:l,addEventListener:l,removeEventListener:m,emit:n,get:g,listeners:v,context:t,buffer:y,abort:a,aborted:!1};return b}function o(){return new r}function a(){(s.api||s.feature)&&(p.aborted=!0,s=p.backlog={})}var c="nr@context",f=e("gos"),u=e(6),s={},d={},p=t.exports=i();p.backlog=s},{}],gos:[function(e,t,n){function r(e,t,n){if(i.call(e,t))return e[t];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return e[t]=r,r}var i=Object.prototype.hasOwnProperty;t.exports=r},{}],handle:[function(e,t,n){function r(e,t,n,r){i.buffer([e],r),i.emit(e,t,n)}var i=e("ee").get("handle");t.exports=r,r.ee=i},{}],id:[function(e,t,n){function r(e){var t=typeof e;return!e||"object"!==t&&"function"!==t?-1:e===window?0:a(e,o,function(){return i++})}var i=1,o="nr@id",a=e("gos");t.exports=r},{}],loader:[function(e,t,n){function r(){if(!E++){var e=b.info=NREUM.info,t=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(e&&e.licenseKey&&e.applicationID&&t))return u.abort();f(h,function(t,n){e[t]||(e[t]=n)});var n=a();c("mark",["onload",n+b.offset],null,"api"),c("timing",["load",n]);var r=p.createElement("script");r.src="https://"+e.agent,t.parentNode.insertBefore(r,t)}}function i(){"complete"===p.readyState&&o()}function o(){c("mark",["domContent",a()+b.offset],null,"api")}var a=e(2),c=e("handle"),f=e(6),u=e("ee"),s=e(4),d=window,p=d.document,l="addEventListener",m="attachEvent",v=d.XMLHttpRequest,g=v&&v.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:v,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var y=""+location,h={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1184.min.js"},w=v&&g&&g[l]&&!/CriOS/.test(navigator.userAgent),b=t.exports={offset:a.getLastTimestamp(),now:a,origin:y,features:{},xhrWrappable:w,userAgent:s};e(1),e(3),p[l]?(p[l]("DOMContentLoaded",o,!1),d[l]("load",r,!1)):(p[m]("onreadystatechange",i),d[m]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var E=0},{}],"wrap-function":[function(e,t,n){function r(e){return!(e&&e instanceof Function&&e.apply&&!e[a])}var i=e("ee"),o=e(7),a="nr@original",c=Object.prototype.hasOwnProperty,f=!1;t.exports=function(e,t){function n(e,t,n,i){function nrWrapper(){var r,a,c,f;try{a=this,r=o(arguments),c="function"==typeof n?n(r,a):n||{}}catch(u){p([u,"",[r,a,i],c])}s(t+"start",[r,a,i],c);try{return f=e.apply(a,r)}catch(d){throw s(t+"err",[r,a,d],c),d}finally{s(t+"end",[r,a,f],c)}}return r(e)?e:(t||(t=""),nrWrapper[a]=e,d(e,nrWrapper),nrWrapper)}function u(e,t,i,o){i||(i="");var a,c,f,u="-"===i.charAt(0);for(f=0;f<t.length;f++)c=t[f],a=e[c],r(a)||(e[c]=n(a,u?c+i:i,o,c))}function s(n,r,i){if(!f||t){var o=f;f=!0;try{e.emit(n,r,i,t)}catch(a){p([a,n,r,i])}f=o}}function d(e,t){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(e);return n.forEach(function(n){Object.defineProperty(t,n,{get:function(){return e[n]},set:function(t){return e[n]=t,t}})}),t}catch(r){p([r])}for(var i in e)c.call(e,i)&&(t[i]=e[i]);return t}function p(t){try{e.emit("internal-error",t)}catch(n){}}return e||(e=i),n.inPlace=u,n.flag=a,n}},{}]},{},["loader"]);</script><meta name="viewport" content="width=device-width">
+	<title></title>
+	<style type="text/css">@media only screen and (max-width: 612px){.quebratext{font-size: 15px!important;left: 0px!important;}}@media only screen{html{min-height:100%;background:#f5f5f5}}@media only screen and (max-width:612px){.small-float-center{margin:0 auto!important;float:none!important;text-align:center!important}}@media only screen and (max-width:612px){table.body table.container .show-for-large{display:none!important;width:0;mso-hide:all;overflow:hidden}}@media only screen and (max-width:612px){table.body img{width:auto;height:auto}table.body center{min-width:0!important}table.body .container{width:95%!important}table.body .columns{height:auto!important;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box;padding-left:12px!important;padding-right:12px!important}table.body .columns .columns{padding-left:0!important;padding-right:0!important}table.body .collapse .columns{padding-left:0!important;padding-right:0!important}th.small-1{display:inline-block!important;width:8.33333%!important}th.small-2{display:inline-block!important;width:16.66667%!important}th.small-8{display:inline-block!important;width:66.66667%!important}th.small-10{display:inline-block!important;width:83.33333%!important}th.small-12{display:inline-block!important;width:100%!important}.columns th.small-12{display:block!important;width:100%!important}table.body th.small-offset-1 {margin-left:8.33333%!important;Margin-left:8.33333%!important;border-right: 0px!important;}}@media screen and (max-width:618px){.am-comp-grid__column{border-right:0}}
+	</style>
+</head>
+<body style="-moz-box-sizing:border-box;-ms-text-size-adjust:100%;-webkit-box-sizing:border-box;-webkit-text-size-adjust:100%;Margin:0;box-sizing:border-box;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;min-width:100%;padding:0;text-align:left;width:100%!important">
+<table class="body" style="Margin:0;background:#f5f5f5;border-collapse:collapse;border-spacing:0;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;height:100%;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;width:100%">
+	<tbody>
+		<tr style="padding:0;text-align:left;vertical-align:top">
+			<td align="center" class="center" style="-moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;hyphens:none;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-break:keep-all;word-wrap:break-word" valign="top">
+			<center data-parsed="" style="min-width:600px;width:100%">
+			<table align="center" class="container float-center" style="Margin:0 auto;background:#f5f5f5;border-collapse:collapse;border-spacing:0;float:none;margin:0 auto;padding:0;text-align:center;vertical-align:top;width:600px">
+				<tbody>
+					<tr style="padding:0;text-align:left;vertical-align:top">
+						<td style="-moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;hyphens:none;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-break:keep-all;word-wrap:break-word">
+						<table align="center" class="wrapper am-wrapper" style="background-color:#f5f5f5;border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+							<tbody>
+								<tr style="padding:0;text-align:left;vertical-align:top">
+									<td class="wrapper-inner" style="-moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;hyphens:none;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-break:keep-all;word-wrap:break-word">
+									<table class="row am-comp-header" style="background-color:#f5f5f5;border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+										<tbody>
+											<tr style="padding:0;text-align:left;vertical-align:top">
+												<th class="small-12 large-12 columns first last" style="Margin:0 auto;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:12px;padding-right:12px;text-align:left;width:588px">
+												<table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+													<tbody>
+														<tr style="padding:0;text-align:left;vertical-align:top">
+															<th style="Margin:0;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">
+															<table class="spacer" style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+																<tbody>
+																	<tr style="padding:0;text-align:left;vertical-align:top">
+																		<td height="36px" style="-moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:36px;font-weight:400;hyphens:none;line-height:36px;margin:0;mso-line-height-rule:exactly;padding:0;text-align:left;vertical-align:top;word-break:keep-all;word-wrap:break-word">&nbsp;</td>
+																	</tr>
+																</tbody>
+															</table>
+
+															<table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+																<tbody>
+																	<tr style="padding:0;text-align:left;vertical-align:top">
+																		<th style="Margin:0;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left" valign="middle"><img src="https://www.agorainvest.com.br/uploads/comunicacoes/mk/padrao2019/new/logo-agora-investimentos.png" style="-ms-interpolation-mode:bicubic;clear:both;display:block;max-width:100%;outline:0;text-decoration:none;width:auto" /></th>
+																		<th style="Margin:0;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left" width="20">&nbsp;</th>
+																		<th style="Margin:0;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left" valign="middle">
+																		<p style="Margin:0;Margin-bottom:0;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;margin-bottom:0;padding:0;text-align:left">&nbsp;</p>
+
+																		<p class="text-right am-caption-medium am-comp-header__text" style="Margin:0;Margin-bottom:0;color:#999;font-family:Arial,Helvetica,sans-serif;font-size:12px;font-weight:400;letter-spacing:.6px;line-height:20px;margin:0;margin-bottom:0;padding:0;text-align:right">&nbsp;</p>
+
+																		<p style="Margin:0;Margin-bottom:0;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;margin-bottom:0;padding:0;text-align:left">&nbsp;</p>
+																		</th>
+																	</tr>
+																</tbody>
+															</table>
+
+															<table class="spacer" style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+																<tbody>
+																	<tr style="padding:0;text-align:left;vertical-align:top">
+																		<td height="20px" style="-moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:20px;font-weight:400;hyphens:none;line-height:20px;margin:0;mso-line-height-rule:exactly;padding:0;text-align:left;vertical-align:top;word-break:keep-all;word-wrap:break-word">&nbsp;</td>
+																	</tr>
+																</tbody>
+															</table>
+															</th>
+															<th class="expander" style="Margin:0;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0!important;text-align:left;visibility:hidden;width:0">&nbsp;</th>
+														</tr>
+													</tbody>
+												</table>
+												</th>
+											</tr>
+										</tbody>
+									</table>
+									<!--inicio modulo--><!--inicio cabe�alho-->
+
+									<table align="center" class="wrapper am-comp-image" style="background-color:#fff;border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+										<tbody>
+											<tr style="padding:0;text-align:left;vertical-align:top">
+												<td class="wrapper-inner" style="-moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;hyphens:none;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-break:keep-all;word-wrap:break-word">
+												<table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+													<tbody>
+														<tr style="padding:0;text-align:left;vertical-align:top">
+															<th style="Margin:0;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left"><img height="100%" src="https://www.agorainvest.com.br/uploads/comunicacoes/mk/email-bf/assets/e-mail 600x200.png" style="-ms-interpolation-mode:bicubic;clear:both;display:block;max-width:100%;outline:0;text-decoration:none;width:600px" width="600" /></th>
+														</tr>
+													</tbody>
+												</table>
+												<!-- title início -->
+
+												<table class="row" style="border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+													<tbody>
+														<tr style="padding:0;text-align:left;vertical-align:top">
+															<th class="small-offset-1 large-offset-1 small-10 large-10 columns first" style="Margin:0 auto;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:62px;padding-right:6px;text-align:left;width:488px">
+															<table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+																<tbody>
+																	<tr style="padding:0;text-align:left;vertical-align:top">
+																		<th style="Margin:0;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">
+																		<p class="am-comp-image__title am-comp-image__title--green am-body-large" style="Margin:0;Margin-bottom:0;color:#175459;font-family:Arial,Helvetica,sans-serif;font-size:28px;font-weight:700;letter-spacing:.2px;line-height:40px;margin:0;margin-bottom:0;padding:0;text-align:left">&nbsp;</p>
+																		</th>
+																	</tr>
+																</tbody>
+															</table>
+															</th>
+															<th class="small-1 large-1 columns last" style="Margin:0 auto;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:6px;padding-right:12px;text-align:left;width:38px">
+															<table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+																<tbody>
+																	<tr style="padding:0;text-align:left;vertical-align:top">
+																		<th style="Margin:0;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">&nbsp;</th>
+																	</tr>
+																</tbody>
+															</table>
+															</th>
+														</tr>
+													</tbody>
+												</table>
+
+												<table align="center" class="wrapper am-comp-image" style="background-color:#fff;border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+													<tbody>
+														<tr style="padding:0;text-align:left;vertical-align:top">
+															<td class="wrapper-inner" style="-moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;hyphens:none;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-break:keep-all;word-wrap:break-word"><!-- title início --><!-- title fim --></td>
+														</tr>
+													</tbody>
+												</table>
+												<!-- inicio titulo_texto --><!-- inicio espaço_bco --></td>
+											</tr>
+											<!-- inicio espaço_cinza -->
+										</tbody>
+									</table>
+									<!--fim cabe�alho--><!-- tabela 1.1 bloco inicio -->
+
+									<table align="center" class="wrapper am-comp-bullets" style="background-color:#fff;border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+										<tbody>
+											<tr style="padding:0;text-align:left;vertical-align:top">
+												<td class="wrapper-inner" style="-moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;hyphens:none;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-break:keep-all;word-wrap:break-word">
+												<table class="row" style="border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+													<tbody>
+														<tr style="padding:0;text-align:left;vertical-align:top">
+															<th class="small-offset-1 large-offset-1 small-10 large-10 columns first" style="Margin:0 auto;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:62px;padding-right:6px;text-align:left;width:488px">
+															<p class="am-comp-text__title am-heading-medium am-comp-text__title--green" style="Margin:0;Margin-bottom:0;color:#175459;font-family:Arial,Helvetica,sans-serif;font-size:30px;font-weight:700;letter-spacing:.2px;line-height:40px;margin:0;margin-bottom:0;padding:0;text-align:left;"></p>
+															&nbsp;
+
+															<table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+																<tbody>
+																	<tr style="padding:0;text-align:left;vertical-align:top">
+																		<th style="Margin:0;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left"><!-- pretext in�cio -->
+																		<p class="am-comp-bullets__text am-body-large" style="Margin:0;Margin-bottom:0;color:#666;font-family:Arial,Helvetica,sans-serif;font-size:18px;font-weight:400;letter-spacing:.6px;line-height:30px;margin:0;margin-bottom:0;padding:0;text-align:left">Olá, [PRIMEIRONOME]. <br> <br> Na Black Invest Ágora, você tem desconto exclusivo nas taxas de corretagem para investir pelo app e pelo Home Broker.</p>
+
+																		<p class="am-comp-bullets__text am-body-large" style="Margin:0;Margin-bottom:0;color:#666;font-family:Arial,Helvetica,sans-serif;font-size:18px;font-weight:400;letter-spacing:.6px;line-height:30px;margin:0;margin-bottom:0;padding:0;text-align:left">&nbsp;</p>
+																		</th>
+																	</tr>
+																</tbody>
+															</table>
+															</th>
+															<th class="small-1 large-1 columns last" style="Margin:0 auto;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:6px;padding-right:12px;text-align:left;width:38px">&nbsp;</th>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<!-- tabela 1.1 bloco fim --><!-- tabela 2.1 bloco inicio -->
+
+									<table class="row am-comp-spacer" style="WIDTH: 100%; VERTICAL-ALIGN: top; BORDER-COLLAPSE: collapse; POSITION: relative; PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-SPACING: 0; DISPLAY: table; PADDING-RIGHT: 0px; BACKGROUND-COLOR: #fff">
+										<tbody>
+											<tr style="VERTICAL-ALIGN: top; PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px">
+												<th class="small-12 large-12 columns first last" style="FONT-SIZE: 16px; FONT-FAMILY: Arial,Helvetica,sans-serif; WIDTH: 588px; FONT-WEIGHT: 400; COLOR: #0a0a0a; PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 12px; MARGIN: 0px auto; LINE-HEIGHT: 1.3; PADDING-RIGHT: 12px">
+												<table style="WIDTH: 100%; VERTICAL-ALIGN: top; BORDER-COLLAPSE: collapse; PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-SPACING: 0; PADDING-RIGHT: 0px">
+													<tbody>
+														<tr style="VERTICAL-ALIGN: top; PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px">
+															<th style="FONT-SIZE: 16px; FONT-FAMILY: Arial,Helvetica,sans-serif; FONT-WEIGHT: 400; COLOR: #0a0a0a; PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; LINE-HEIGHT: 1.3; PADDING-RIGHT: 0px">&nbsp;</th>
+															<th class="expander" style="FONT-SIZE: 16px; FONT-FAMILY: Arial,Helvetica,sans-serif; WIDTH: 0px; FONT-WEIGHT: 400; COLOR: #0a0a0a; PADDING-BOTTOM: 0px !important; TEXT-ALIGN: left; PADDING-TOP: 0px !important; PADDING-LEFT: 0px !important; MARGIN: 0px; LINE-HEIGHT: 1.3; PADDING-RIGHT: 0px !important; VISIBILITY: hidden">&nbsp;</th>
+														</tr>
+													</tbody>
+												</table>
+												</th>
+											</tr>
+										</tbody>
+									</table>
+
+									<table class="row am-comp-image-cta" dir="rtl" style="background-color:#fff;border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+										<tbody>
+											<tr style="padding:0;text-align:left;vertical-align:top">
+												<th class="large-offset-1 small-offset-1 small-10 large-5 columns last" style="Margin:0 auto;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:12px;padding-right:62px;text-align:left;width:238px">
+												<table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+													<tbody>
+														<tr style="padding:0;text-align:left;vertical-align:top">
+															<th style="Margin:0;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">
+															<table class="rtl-fix" dir="ltr" style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+																<tbody>
+																	<tr style="padding:0;text-align:left;vertical-align:top">
+																		<td style="-moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;hyphens:none;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-break:keep-all;word-wrap:break-word"><!-- overline in�cio -->
+																		<table align="center" class="wrapper am-comp-indicators-regular" style="background-color:#fff;border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+																			<tbody>
+																				<tr style="padding:0;text-align:left;vertical-align:top">
+																					<td class="wrapper-inner" style="-moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;hyphens:none;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-break:keep-all;word-wrap:break-word">
+																					<table class="row" style="border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+																						<tbody>
+																							<tr style="padding:0;text-align:left;vertical-align:top">
+																								<th class="small-offset-1 large-offset-1 small-10 large-10 columns first" style="Margin:0 auto;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:0px;padding-right:6px;text-align:left;width:488px">
+																								<table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+																									<tbody>
+																										<tr style="padding:0;text-align:left;vertical-align:top">
+																											<th style="Margin:0;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left"><!-- title in�cio --><!-- title fim --></th>
+																										</tr>
+																									</tbody>
+																								</table>
+																								</th>
+																							</tr>
+																						</tbody>
+																					</table>
+																					<!-- indicators in�cio --><!-- indicators fim --></td>
+																				</tr>
+																			</tbody>
+																		</table>
+
+																		<table class="spacer" style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+																			<tbody>
+																				<tr style="padding:0;text-align:left;vertical-align:top">
+																					<td height="8px" style="-moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:8px;font-weight:400;hyphens:none;line-height:8px;margin:0;mso-line-height-rule:exactly;padding:0;text-align:left;vertical-align:top;word-break:keep-all;word-wrap:break-word">&nbsp;</td>
+																				</tr>
+																			</tbody>
+																		</table>
+																		<!-- overline fim --><!-- links in�cio --><!-- link in�cio --><!-- quadra1 inicio -->
+
+																		<table style=" WIDTH: 100%; VERTICAL-ALIGN: top;PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px;PADDING-RIGHT: 0px;background-color: #f5f5f5;">
+																			<tbody>
+																				<tr style="VERTICAL-ALIGN: top; PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px">
+																					<th style="FONT-SIZE: 16px; FONT-FAMILY: Arial,Helvetica,sans-serif; FONT-WEIGHT: 400; COLOR: #ffffff; PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; LINE-HEIGHT: 1.3; PADDING-RIGHT: 0px">
+																					<p class="am-comp-steps__subtext" style="FONT-SIZE: 24px; FONT-FAMILY: Arial,Helvetica,sans-serif; FONT-WEIGHT: 400; COLOR: #666; PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: 0px; LINE-HEIGHT: 8px; PADDING-RIGHT: 0px">&nbsp;</p>
+
+																					<center data-parsed="" style="FONT-SIZE: 21px; WIDTH: 100%; MIN-WIDTH: 44px; COLOR: #000">
+																						<center data-parsed="" style="font-size: 16px; color: #000">
+																							<span style="Margin:0;Margin-bottom:0;color:#666;font-family:Arial,Helvetica,sans-serif;font-size:18px;font-weight:400;letter-spacing:.6px;line-height:30px;margin:0;margin-bottom:0;"
+																							> <b>Day trade</b> </span>  <br>
+																						   <del style="Margin:0;Margin-bottom:0;color:#666;font-family:Arial,Helvetica,sans-serif;font-size:18px;font-weight:400;letter-spacing:.6px;line-height:30px;margin:0;margin-bottom:0;">R$2,50</del>
+																						   </center>
+																					<center data-parsed="" style="FONT-SIZE: 30px; WIDTH: 100%; MIN-WIDTH: 44px; COLOR: #01c592"><font size="+0"><span style="FONT-SIZE: 18px;position: relative;top: 35px;right: 50px;">R$</span><br />
+																					<span style="FONT-SIZE: 40px"><b>0,99</b></span><br />
+																					<span style="FONT-SIZE: 12px"><span style="COLOR: #000000;">por ordem</span></span></font><br />
+																					&nbsp;</center>
+																					
+
+																					<table class="spacer" style="FONT-SIZE: 16px; WIDTH: 100%; VERTICAL-ALIGN: top; BORDER-COLLAPSE: collapse; COLOR: rgb(255,255,255); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-SPACING: 0px; PADDING-RIGHT: 0px">
+																						<tbody>
+																							<tr style="VERTICAL-ALIGN: top; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px">
+																								<td height="1" style="FONT-SIZE: 10px; VERTICAL-ALIGN: top; BORDER-COLLAPSE: collapse !important; WORD-BREAK: keep-all; COLOR: rgb(10,10,10); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; LINE-HEIGHT: 10px; PADDING-RIGHT: 0px; hyphens: none; overflow-wrap: break-word">&nbsp;</td>
+																							</tr>
+																						</tbody>
+																					</table>
+																					</center>
+																					</th>
+																				</tr>
+																			</tbody>
+																		</table>
+																		<!-- quadra1 fim --></td>
+																	</tr>
+																</tbody>
+															</table>
+
+															<table class="spacer" style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+																<tbody>
+																	<tr style="padding:0;text-align:left;vertical-align:top">
+																		<td height="42px" style="-moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:42px;font-weight:400;hyphens:none;line-height:42px;margin:0;mso-line-height-rule:exactly;padding:0;text-align:left;vertical-align:top;word-break:keep-all;word-wrap:break-word">&nbsp;</td>
+																	</tr>
+																</tbody>
+															</table>
+															</th>
+														</tr>
+													</tbody>
+												</table>
+												</th>
+												<!-- part 2 inicio-->
+												<th class="large-offset-1 small-offset-1 small-10 large-5 columns last" style="Margin:0 auto;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:62px;padding-right:12px;text-align:left;width:238px">
+												<table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+													<tbody>
+														<tr style="padding:0;text-align:left;vertical-align:top">
+															<th style="Margin:0;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">
+															<table class="rtl-fix" dir="ltr" style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+																<tbody>
+																	<tr style="padding:0;text-align:left;vertical-align:top">
+																		<td style="-moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;hyphens:none;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-break:keep-all;word-wrap:break-word"><!-- overline in�cio -->
+																		<table align="center" class="wrapper am-comp-indicators-regular" style="background-color:#fff;border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+																			<tbody>
+																				<tr style="padding:0;text-align:left;vertical-align:top">
+																					<td class="wrapper-inner" style="-moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;hyphens:none;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-break:keep-all;word-wrap:break-word">
+																					<table class="row" style="border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+																						<tbody>
+																							<tr style="padding:0;text-align:left;vertical-align:top">
+																								<th class="small-offset-1 large-offset-1 small-10 large-10 columns first" style="Margin:0 auto;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:0px;padding-right:6px;text-align:left;width:488px">
+																								<table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+																									<tbody>
+																										<tr style="padding:0;text-align:left;vertical-align:top">
+																											<th style="Margin:0;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left"><!-- title in�cio --><!-- title fim --></th>
+																										</tr>
+																									</tbody>
+																								</table>
+																								</th>
+																							</tr>
+																						</tbody>
+																					</table>
+																					<!-- indicators in�cio --><!-- indicators fim --></td>
+																				</tr>
+																			</tbody>
+																		</table>
+
+																		<table class="spacer" style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+																			<tbody>
+																				<tr style="padding:0;text-align:left;vertical-align:top">
+																					<td height="8px" style="-moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:8px;font-weight:400;hyphens:none;line-height:8px;margin:0;mso-line-height-rule:exactly;padding:0;text-align:left;vertical-align:top;word-break:keep-all;word-wrap:break-word">&nbsp;</td>
+																				</tr>
+																			</tbody>
+																		</table>
+																		<!-- overline fim --><!-- links in�cio --><!-- link in�cio --><!-- quadra1 inicio -->
+
+																		<table style=" WIDTH: 100%; VERTICAL-ALIGN: top;PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px;PADDING-RIGHT: 0px;background-color: #f5f5f5;">
+																			<tbody>
+																				<tr style="VERTICAL-ALIGN: top; PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px">
+																					<th style="FONT-SIZE: 16px; FONT-FAMILY: Arial,Helvetica,sans-serif; FONT-WEIGHT: 400; COLOR: #ffffff; PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; LINE-HEIGHT: 1.3; PADDING-RIGHT: 0px">
+																					<p class="am-comp-steps__subtext" style="FONT-SIZE: 24px; FONT-FAMILY: Arial,Helvetica,sans-serif; FONT-WEIGHT: 400; COLOR: #666; PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; LETTER-SPACING: 0px; LINE-HEIGHT: 8px; PADDING-RIGHT: 0px">&nbsp;</p>
+
+																					<center data-parsed="" style="FONT-SIZE: 21px; WIDTH: 100%; MIN-WIDTH: 44px; COLOR: #000">
+																						<center data-parsed="" style="font-size: 16px; color: #000">
+																						 <span style="Margin:0;Margin-bottom:0;color:#666;font-family:Arial,Helvetica,sans-serif;font-size:18px;font-weight:400;letter-spacing:.6px;line-height:30px;margin:0;margin-bottom:0;"
+																						 > <b>Mercado à vista</b> </span>  <br>
+																						<del style="Margin:0;Margin-bottom:0;color:#666;font-family:Arial,Helvetica,sans-serif;font-size:18px;font-weight:400;letter-spacing:.6px;line-height:30px;margin:0;margin-bottom:0;">R$4,50</del>
+																						</center>
+																					<center data-parsed="" style="FONT-SIZE: 30px; WIDTH: 100%; MIN-WIDTH: 44px; COLOR: #01c592"><font size="+0"><span style="FONT-SIZE: 18px;position: relative;top: 35px;right: 50px;">R$</span><br />
+																					<span style="FONT-SIZE: 40px"><b>1,99</b></span><br />
+																					<span style="FONT-SIZE: 12px"><span style="COLOR: #000000;"> por ordem</span></span></font><br />
+																					&nbsp;</center>
+																					
+
+																					<table class="spacer" style="FONT-SIZE: 16px; WIDTH: 100%; VERTICAL-ALIGN: top; BORDER-COLLAPSE: collapse; COLOR: rgb(255,255,255); PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-SPACING: 0px; PADDING-RIGHT: 0px">
+																						<tbody>
+																							<tr style="VERTICAL-ALIGN: top; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px">
+																								<td height="1" style="FONT-SIZE: 10px; VERTICAL-ALIGN: top; BORDER-COLLAPSE: collapse !important; WORD-BREAK: keep-all; COLOR: rgb(10,10,10); PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; LINE-HEIGHT: 10px; PADDING-RIGHT: 0px; hyphens: none; overflow-wrap: break-word">&nbsp;</td>
+																							</tr>
+																						</tbody>
+																					</table>
+																					</center>
+																					</th>
+																				</tr>
+																			</tbody>
+																		</table>
+																		<!-- quadra1 fim --></td>
+																	</tr>
+																</tbody>
+															</table>
+
+															<table class="spacer" style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+																<tbody>
+																	<tr style="padding:0;text-align:left;vertical-align:top">
+																		<td height="42px" style="-moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:42px;font-weight:400;hyphens:none;line-height:42px;margin:0;mso-line-height-rule:exactly;padding:0;text-align:left;vertical-align:top;word-break:keep-all;word-wrap:break-word">&nbsp;</td>
+																	</tr>
+																</tbody>
+															</table>
+															</th>
+														</tr>
+													</tbody>
+												</table>
+												</th>
+												<!--part 2 fim-->
+											</tr>
+										</tbody>
+									</table>
+									<!-- tabela 2.1 bloco fim --><!-- tabela 3.1 bloco inicio -->
+
+									<table class="spacer" style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+										<tbody>
+											<tr style="padding:0;text-align:left;vertical-align:top">
+												<td height="5px" style="-moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:5px;font-weight:400;hyphens:none;line-height:5px;margin:0;mso-line-height-rule:exactly;padding:0;text-align:left;vertical-align:top;word-break:keep-all;word-wrap:break-word">&nbsp;</td>
+											</tr>
+										</tbody>
+									</table>
+
+									<table class="row am-comp-spacer" style="background-color:#fff;border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+										<tbody>
+											<tr style="padding:0;text-align:left;vertical-align:top">
+												<th class="small-12 large-12 columns first last" style="Margin:0 auto;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:12px;padding-right:12px;text-align:left;width:588px">
+												<table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+													<tbody>
+														<tr style="padding:0;text-align:left;vertical-align:top">
+															<th style="Margin:0;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">
+															<table class="spacer" style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+																
+															</table>
+															</th>
+															<th class="expander" style="Margin:0;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0!important;text-align:left;visibility:hidden;width:0">&nbsp;</th>
+														</tr>
+													</tbody>
+												</table>
+												</th>
+											</tr>
+										</tbody>
+									</table>
+
+									<table align="center" class="wrapper am-comp-text" style="background-color:#fff;border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+										<tbody>
+											<tr style="color:#666;padding:0;text-align:left;vertical-align:top">
+												<td class="wrapper-inner" style="-moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;Margin:0;border-collapse:collapse!important;color:#666;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;hyphens:none;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-break:keep-all;word-wrap:break-word">
+												<table class="row" style="border-collapse:collapse;border-spacing:0;color:#666;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+													<tbody style="color:#666">
+														<tr style="color:#666;padding:0;text-align:left;vertical-align:top">
+															<th class="large-offset-1 small-offset-1 small-10 large-10 columns first" style="Margin:0 auto;color:#666;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:62px;padding-right:6px;text-align:left;width:488px">
+															<table style="border-collapse:collapse;border-spacing:0;color:#666;padding:0;text-align:left;vertical-align:top;width:100%">
+																<tbody>
+																	<tr style="color:#666;padding:0;text-align:left;vertical-align:top">
+																		<th style="Margin:0;color:#666;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left"><!-- title in�cio --><ta{c}{c}{c}<!-- title="" fim="" --=""><!-- text in�cio --><!-- text par�grafo in�cio -->
+																		<p ce class="am-comp-text__title am-heading-medium am-comp-text__title--black" style="Margin:0;Margin-bottom:0;color:#000;font-family:Arial,Helvetica,sans-serif;font-size:26px;font-weight:400;letter-spacing:.2px;line-height:34px;margin:0;margin-bottom:0;padding:0;text-align:left;">Condições válidas somente hoje</p>
+																		<br />
+																		<!-- text par�grafo fim --><!-- text fim --> <!-- links fim -->
+																		<table class="row" style="border-collapse:collapse;border-spacing:0;color:#666;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+																			<tbody style="color:#666">
+																				<tr style="color:#666;padding:0;text-align:left;vertical-align:top">
+																					<p class="am-comp-text__text am-body-large" style="Margin:0;Margin-bottom:0;color:#666!important;font-family:Arial,Helvetica,sans-serif;font-size:18px;font-weight:400;letter-spacing:.6px;line-height:30px;margin:0;margin-bottom:0;padding:0; text-align: left;">Aproveite agora esta oportunidade e faça seu dinheiro render mais! </p>
+																					<th class="large-offset-1 small-offset-1 small-10 large-10 columns first" style="Margin:0 auto;color:#666;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:62px;padding-right:6px;text-align:left;width:488px">
+																					<table style="border-collapse:collapse;border-spacing:0;color:#666;padding:0;text-align:left;vertical-align:top;width:100%">
+																						
+																						<tbody>
+																							<tr style="color:#666;padding:0;text-align:left;vertical-align:top">
+																								<!-- title in�cio --><!-- title fim --><!-- text in�cio --><!-- text par�grafo in�cio -->
+																								
+																								<!-- text par�grafo fim --><!-- text fim -->
+
+																								<table class="row am-comp-spacer" style="background-color:#fff;border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+																									<tbody>
+																										<tr style="padding:0;text-align:left;vertical-align:top">
+																											<th class="small-12 large-12 columns first last" style="Margin:0 auto;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:12px;padding-right:12px;text-align:left;width:588px">
+																											<table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+																												<tbody>
+																													<tr style="padding:0;text-align:left;vertical-align:top">
+																														<th style="Margin:0;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">
+																														<table class="spacer" style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+																															<tbody>
+																																<tr style="padding:0;text-align:left;vertical-align:top">
+																																	
+																																</tr>
+																															</tbody>
+																														</table>
+																														</th>
+																														<th class="expander" style="Margin:0;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0!important;text-align:left;visibility:hidden;width:0">&nbsp;</th>
+																													</tr>
+																												</tbody>
+																											</table>
+																											</th>
+																										</tr>
+																									</tbody>
+																								</table>
+																								</th>
+																							</tr>
+																						</tbody>
+																					</table>
+																					</th>
+																					<th class="small-1 large-1 columns last" style="Margin:0 auto;color:#666;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:6px;padding-right:12px;text-align:left;width:38px">
+																					<table style="border-collapse:collapse;border-spacing:0;color:#666;padding:0;text-align:left;vertical-align:top;width:100%">
+																						<tbody>
+																							<tr style="color:#666;padding:0;text-align:left;vertical-align:top">
+																								<th style="Margin:0;color:#666;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">&nbsp;</th>
+																							</tr>
+																						</tbody>
+																					</table>
+																					</th>
+																				</tr>
+																			</tbody>
+																		</table>
+																		</ta{c}{c}{c}<!-- title="" fim="" --=""><!-- text in�cio --></th>
+																	</tr>
+																</tbody>
+															</table>
+															<!-- tabela 3.1 bloco fim --><!-- tabela 4.1 bloco inicio -->
+
+															<table class="spacer" style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+																<tbody>
+																	<tr style="padding:0;text-align:left;vertical-align:top">
+																		<td height="5px" style="-moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:5px;font-weight:400;hyphens:none;line-height:5px;margin:0;mso-line-height-rule:exactly;padding:0;text-align:left;vertical-align:top;word-break:keep-all;word-wrap:break-word">&nbsp;</td>
+																	</tr>
+																</tbody>
+															</table>
+
+															<table class="row am-comp-spacer" style="WIDTH: 100%; VERTICAL-ALIGN: top; BORDER-COLLAPSE: collapse; POSITION: relative; PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-SPACING: 0; DISPLAY: table; PADDING-RIGHT: 0px; BACKGROUND-COLOR: #fff">
+																<tbody>
+																	<tr style="VERTICAL-ALIGN: top; PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px">
+																		<th class="small-12 large-12 columns first last" style="FONT-SIZE: 16px; FONT-FAMILY: Arial,Helvetica,sans-serif; WIDTH: 588px; FONT-WEIGHT: 400; COLOR: #0a0a0a; PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 12px; MARGIN: 0px auto; LINE-HEIGHT: 1.3; PADDING-RIGHT: 12px">
+																		<table style="WIDTH: 100%; VERTICAL-ALIGN: top; BORDER-COLLAPSE: collapse; PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-SPACING: 0; PADDING-RIGHT: 0px">
+																			<tbody>
+																				<tr style="VERTICAL-ALIGN: top; PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px">
+																					<th style="FONT-SIZE: 16px; FONT-FAMILY: Arial,Helvetica,sans-serif; FONT-WEIGHT: 400; COLOR: #0a0a0a; PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; LINE-HEIGHT: 1.3; PADDING-RIGHT: 0px">
+																					<table class="spacer" style="WIDTH: 100%; VERTICAL-ALIGN: top; BORDER-COLLAPSE: collapse; PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-SPACING: 0; PADDING-RIGHT: 0px">
+																						
+																					</table>
+																					</th>
+																					<th class="expander" style="FONT-SIZE: 16px; FONT-FAMILY: Arial,Helvetica,sans-serif; WIDTH: 0px; FONT-WEIGHT: 400; COLOR: #0a0a0a; PADDING-BOTTOM: 0px !important; TEXT-ALIGN: left; PADDING-TOP: 0px !important; PADDING-LEFT: 0px !important; MARGIN: 0px; LINE-HEIGHT: 1.3; PADDING-RIGHT: 0px !important; VISIBILITY: hidden">&nbsp;</th>
+																				</tr>
+																			</tbody>
+																		</table>
+																		</th>
+																	</tr>
+																</tbody>
+															</table>
+
+															<table align="center" class="wrapper am-comp-text" style="WIDTH: 100%; VERTICAL-ALIGN: top; BORDER-COLLAPSE: collapse; PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-SPACING: 0; PADDING-RIGHT: 0px; BACKGROUND-COLOR: #fff">
+																<tbody>
+																	<tr style="VERTICAL-ALIGN: top; COLOR: #666; PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px">
+																		<td class="wrapper-inner" style="FONT-SIZE: 16px; WORD-WRAP: break-word; FONT-FAMILY: Arial,Helvetica,sans-serif; VERTICAL-ALIGN: top; BORDER-COLLAPSE: collapse !important; WORD-BREAK: keep-all; FONT-WEIGHT: 400; COLOR: #666; PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; LINE-HEIGHT: 1.3; PADDING-RIGHT: 0px; -moz-hyphens: none; -ms-hyphens: none; -webkit-hyphens: none; hyphens: none">
+																		<table class="row" style="WIDTH: 100%; VERTICAL-ALIGN: top; BORDER-COLLAPSE: collapse; POSITION: relative; COLOR: #666; PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-SPACING: 0; DISPLAY: table; PADDING-RIGHT: 0px">
+																			<tbody style="COLOR: #666">
+																				<tr style="VERTICAL-ALIGN: top; COLOR: #666; PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px">
+																					<th class="large-offset-1 small-offset-1 small-10 large-10 columns first" style="FONT-SIZE: 16px; FONT-FAMILY: Arial,Helvetica,sans-serif; WIDTH: 488px; FONT-WEIGHT: 400; COLOR: #666; PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 62px; MARGIN: 0px auto; LINE-HEIGHT: 1.3; PADDING-RIGHT: 6px">
+																					<table style="WIDTH: 100%; VERTICAL-ALIGN: top; BORDER-COLLAPSE: collapse; COLOR: #666; PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-SPACING: 0; PADDING-RIGHT: 0px">
+																						
+
+																								<table class="spacer" style="WIDTH: 100%; VERTICAL-ALIGN: top; BORDER-COLLAPSE: collapse; COLOR: #666; PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-SPACING: 0; PADDING-RIGHT: 0px">
+																									<tbody style="COLOR: #666">
+																										<tr style="VERTICAL-ALIGN: top; COLOR: #666; PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px">
+																											<td height="30" style="FONT-SIZE: 30px; WORD-WRAP: break-word; FONT-FAMILY: Arial,Helvetica,sans-serif; VERTICAL-ALIGN: top; BORDER-COLLAPSE: collapse !important; WORD-BREAK: keep-all; FONT-WEIGHT: 400; COLOR: #666; PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; LINE-HEIGHT: 30px; PADDING-RIGHT: 0px; -moz-hyphens: none; -ms-hyphens: none; -webkit-hyphens: none; hyphens: none; mso-line-height-rule: exactly">&nbsp;</td>
+																										</tr>
+																									</tbody>
+																								</table>
+																								<!-- title fim --><!-- text in?cio --><!-- text par?grafo in?cio -->
+
+																							
+																								<br />
+																							
+																								<!-- text par?grafo fim --><!-- text fim --></th>
+																							</tr>
+																						</tbody>
+																					</table>
+																					</th>
+																					<th class="small-1 large-1 columns last" style="FONT-SIZE: 16px; FONT-FAMILY: Arial,Helvetica,sans-serif; WIDTH: 38px; FONT-WEIGHT: 400; COLOR: #666; PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 6px; MARGIN: 0px auto; LINE-HEIGHT: 1.3; PADDING-RIGHT: 12px">
+																					<table style="WIDTH: 100%; VERTICAL-ALIGN: top; BORDER-COLLAPSE: collapse; COLOR: #666; PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-SPACING: 0; PADDING-RIGHT: 0px">
+																						<tbody>
+																							<tr style="VERTICAL-ALIGN: top; COLOR: #666; PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px">
+																								<th style="FONT-SIZE: 16px; FONT-FAMILY: Arial,Helvetica,sans-serif; FONT-WEIGHT: 400; COLOR: #666; PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; LINE-HEIGHT: 1.3; PADDING-RIGHT: 0px">&nbsp;</th>
+																							</tr>
+																						</tbody>
+																					</table>
+																					</th>
+																				</tr>
+																			</tbody>
+																		</table>
+																		<!-- links in?cio -->
+
+																		<table class="row" style="WIDTH: 100%; VERTICAL-ALIGN: top; BORDER-COLLAPSE: collapse; POSITION: relative; COLOR: #666; PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-SPACING: 0; DISPLAY: table; PADDING-RIGHT: 0px">
+																			<tbody style="COLOR: #666">
+																				<tr style="VERTICAL-ALIGN: top; COLOR: #666; PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px">
+																					<th class="large-offset-1 small-offset-1 small-10 large-10 columns first" style="FONT-SIZE: 16px; FONT-FAMILY: Arial,Helvetica,sans-serif; WIDTH: 488px; FONT-WEIGHT: 400; COLOR: #666; PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 62px; MARGIN: 0px auto; LINE-HEIGHT: 1.3; PADDING-RIGHT: 6px">
+																					<table style="WIDTH: 100%; VERTICAL-ALIGN: top; BORDER-COLLAPSE: collapse; COLOR: #666; PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-SPACING: 0; PADDING-RIGHT: 0px">
+																						<tbody>
+																							<tr style="VERTICAL-ALIGN: top; COLOR: #666; PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px">
+																								<th style="FONT-SIZE: 16px; FONT-FAMILY: Arial,Helvetica,sans-serif; FONT-WEIGHT: 400; COLOR: #666; PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; LINE-HEIGHT: 1.3; PADDING-RIGHT: 0px">
+																								<table class="spacer" style="WIDTH: 100%; VERTICAL-ALIGN: top; BORDER-COLLAPSE: collapse; COLOR: #666; PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-SPACING: 0; PADDING-RIGHT: 0px">
+																									<tbody style="COLOR: #666">
+																										<tr style="VERTICAL-ALIGN: top; COLOR: #666; PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px">
+																										
+																										</tr>
+																									</tbody>
+																								</table>
+
+																								<center data-parsed="" style="WIDTH: 100%; MIN-WIDTH: 464px; COLOR: #666"><!-- button in?cio -->
+																								<!-- button in?cio --><table class="button float-center" style="WIDTH: auto; VERTICAL-ALIGN: top; BORDER-COLLAPSE: collapse; FLOAT: none; COLOR: #666; PADDING-BOTTOM: 0px; TEXT-ALIGN: center; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-SPACING: 0; MARGIN: 0px 0px 16px; PADDING-RIGHT: 0px"><tbody><tr style="VERTICAL-ALIGN: top; COLOR: #666; PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px"><td style="FONT-SIZE: 16px; WORD-WRAP: break-word; FONT-FAMILY: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; VERTICAL-ALIGN: top; BORDER-COLLAPSE: collapse !important; WORD-BREAK: keep-all; FONT-WEIGHT: 400; COLOR: #666; PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; LINE-HEIGHT: 1.3; PADDING-RIGHT: 0px; -moz-hyphens: none; -ms-hyphens: none; -webkit-hyphens: none; hyphens: none"><table style="WIDTH: 100%; VERTICAL-ALIGN: top; COLOR: #666; PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-SPACING: 0; PADDING-RIGHT: 0px"><tbody><tr style="VERTICAL-ALIGN: top; COLOR: #666; PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px"><td style="FONT-SIZE: 16px; WORD-WRAP: break-word; BORDER-TOP: #01c592 2px solid;border-radius: 50px ;FONT-FAMILY: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; BORDER-RIGHT: #01c592 2px solid; VERTICAL-ALIGN: top; BACKGROUND: #fff; BORDER-COLLAPSE: collapse !important; BORDER-BOTTOM: #01c592 2px solid; WORD-BREAK: keep-all; FONT-WEIGHT: 400; COLOR: #13383d; PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; position: relative; bottom: 45px; BORDER-LEFT: #01c592 2px solid; MARGIN: 0px; LINE-HEIGHT: 1.3; PADDING-RIGHT: 0px; -moz-hyphens: none; -ms-hyphens: none; -webkit-hyphens: none; hyphens: none">
+																									<a href="https://www.agorainvestimentos.com.br/login" style="FONT-SIZE: 12px; TEXT-DECORATION: none; BORDER-TOP: #fff 0px solid; FONT-FAMILY: Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif; BORDER-RIGHT: #fff 0px solid; BORDER-BOTTOM: #fff 0px solid; FONT-WEIGHT: 700; COLOR: #13383d; PADDING-BOTTOM: 16px; TEXT-ALIGN: left; PADDING-TOP: 16px; PADDING-LEFT: 55px; BORDER-LEFT: #fff 0px solid; MARGIN: 0px; DISPLAY: inline-block; LINE-HEIGHT: 1.3; PADDING-RIGHT: 55px; border-radius: 0; ">INVESTIR</a></td></tr></tbody></table></td></tr></tbody></table><!-- button fim -->
+																											</td>
+																										</tr>
+																									</tbody>
+																								</table>
+																								<!-- button fim --></center>
+																								<!-- link fim --></th>
+																							</tr>
+																						</tbody>
+																					</table>
+																					</th>
+																					<th class="small-1 large-1 columns last" style="FONT-SIZE: 16px; FONT-FAMILY: Arial,Helvetica,sans-serif; WIDTH: 38px; FONT-WEIGHT: 400; COLOR: #666; PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 6px; MARGIN: 0px auto; LINE-HEIGHT: 1.3; PADDING-RIGHT: 12px">
+																					<table style="WIDTH: 100%; VERTICAL-ALIGN: top; BORDER-COLLAPSE: collapse; COLOR: #666; PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-SPACING: 0; PADDING-RIGHT: 0px">
+																						<tbody>
+																							<tr style="VERTICAL-ALIGN: top; COLOR: #666; PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px">
+																								<th style="FONT-SIZE: 16px; FONT-FAMILY: Arial,Helvetica,sans-serif; FONT-WEIGHT: 400; COLOR: #666; PADDING-BOTTOM: 0px; TEXT-ALIGN: left; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px; LINE-HEIGHT: 1.3; PADDING-RIGHT: 0px">&nbsp;</th>
+																							</tr>
+																						</tbody>
+																					</table>
+																					</th>
+																				</tr>
+																			</tbody>
+																		</table>
+																		<!-- links fim --><!-- avatar in?cio --><!-- avatar fim --></td>
+																	</tr>
+																</tbody>
+															</table>
+															<!-- tabela 4.1 bloco fim --><!--fim modulo--><!-- rodape inicio--><!-- rodape fim--><!-- comp-footer in�cio -->
+
+															<table align="center" class="wrapper" style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+																<tbody>
+																	<tr style="padding:0;text-align:left;vertical-align:top">
+																		<td class="wrapper-inner" style="-moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;hyphens:none;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-break:keep-all;word-wrap:break-word">
+																		<table class="row" style="border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+																			<tbody>
+																				<tr style="padding:0;text-align:left;vertical-align:top">
+																					<th class="small-12 large-5 columns first" style="Margin:0 auto;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:12px;padding-right:6px;text-align:left;width:238px" valign="middle">
+																					<table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+																						<tbody>
+																							<tr style="padding:0;text-align:left;vertical-align:top">
+																								<th style="Margin:0;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">
+																								<table class="spacer" style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+																									<tbody>
+																										<tr style="padding:0;text-align:left;vertical-align:top">
+																											<td height="32px" style="-moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:32px;font-weight:400;hyphens:none;line-height:32px;margin:0;mso-line-height-rule:exactly;padding:0;text-align:left;vertical-align:top;word-break:keep-all;word-wrap:break-word">&nbsp;</td>
+																										</tr>
+																									</tbody>
+																								</table>
+
+																								<table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+																									<tbody>
+																										<tr style="padding:0;text-align:left;vertical-align:top">
+																											<td style="-moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;hyphens:none;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-break:keep-all;word-wrap:break-word"><a href="https://www.agorainvestimentos.com.br" style="Margin:0;color:#2199e8;font-family:Arial,Helvetica,sans-serif;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left;text-decoration:none" target="_blank"><img class="am-comp-footer--img float-left small-float-center" src="https://www.agorainvest.com.br/uploads/comunicacoes/mk/padrao2019/new/simple_logo.png" style="-ms-interpolation-mode:bicubic;border:none;clear:both;display:block;float:left;max-width:100%;outline:0;text-align:left;text-decoration:none;width:auto" /></a></td>
+																										</tr>
+																									</tbody>
+																								</table>
+																								</th>
+																							</tr>
+																						</tbody>
+																					</table>
+																					</th>
+																					<th class="small-12 large-7 columns last" style="Margin:0 auto;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:6px;padding-right:12px;text-align:left;width:338px" valign="middle">
+																					<table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+																						<tbody>
+																							<tr style="padding:0;text-align:left;vertical-align:top">
+																								<th style="Margin:0;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">
+																								<table class="spacer" style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+																									<tbody>
+																										<tr style="padding:0;text-align:left;vertical-align:top">
+																											<td height="32px" style="-moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:32px;font-weight:400;hyphens:none;line-height:32px;margin:0;mso-line-height-rule:exactly;padding:0;text-align:left;vertical-align:top;word-break:keep-all;word-wrap:break-word">&nbsp;</td>
+																										</tr>
+																									</tbody>
+																								</table>
+
+																								<table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+																									<tbody>
+																										
+																										<tr style="padding:0;text-align:left;vertical-align:top"><!-- linkedin in�cio -->
+																											<td style="-moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;hyphens:none;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-break:keep-all;word-wrap:break-word"><a href="https://www.linkedin.com/company/agorainvestimentos/" style="Margin:0;color:#2199e8;font-family:Arial,Helvetica,sans-serif;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left;text-decoration:none" target="_blank"><img class="small-float-center float-right" src="https://www.agorainvest.com.br/uploads/comunicacoes/mk/padrao2019/new/linkedin_logo.png" style="-ms-interpolation-mode:bicubic;border:none;clear:both;display:block;float:right;max-width:100%;outline:0;text-align:right;text-decoration:none;width:auto" /></a></td>
+																											<!-- linkedin fim -->
+																											 <!-- telegram inicio--><td style="-moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;Margin:0;border-collapse:collapse!important;color: #0a0a0a;font-family:Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;font-size:16px;font-weight:400;hyphens:none;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-break:keep-all;word-wrap:break-word"><a href="https://t.me/agorainvestimentos" target="_blank" style="Margin:0;color:#2199e8;font-family:Calibri,Candara,Segoe,Segoe UI,Optima,Arial,sans-serif;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left;text-decoration:none"><img class="small-float-center float-right" src="https://www.agorainvest.com.br/uploads/comunicacoes/mk/486/assets/telegram-icone-32x32.png" style="-ms-interpolation-mode:bicubic;border:none;clear:both;display:block;float:right;max-width:100%;outline:0;text-align:right;text-decoration:none;width:auto;width: 32px;height: 32px;"></a></td><!-- telegram fim-->
+																											<!-- youtube in�cio -->
+																											<td style="-moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;hyphens:none;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-break:keep-all;word-wrap:break-word"><a href="https://www.youtube.com/AgoraInvestimentos" style="Margin:0;color:#2199e8;font-family:Arial,Helvetica,sans-serif;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left;text-decoration:none" target="_blank"><img class="small-float-center float-right" src="https://www.agorainvest.com.br/uploads/comunicacoes/mk/padrao2019/new/youtube_logo.png" style="-ms-interpolation-mode:bicubic;border:none;clear:both;display:block;float:right;max-width:100%;outline:0;text-align:right;text-decoration:none;width:auto" /></a></td>
+																											<!-- youtube fim --><!-- facebook in�cio -->
+																											<td style="-moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;hyphens:none;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-break:keep-all;word-wrap:break-word"><a href="https://www.facebook.com/agorainvestimentos/" style="Margin:0;color:#2199e8;font-family:Arial,Helvetica,sans-serif;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left;text-decoration:none" target="_blank"><img class="small-float-center float-right" src="https://www.agorainvest.com.br/uploads/comunicacoes/mk/padrao2019/new/facebook_logo.png" style="-ms-interpolation-mode:bicubic;border:none;clear:both;display:block;float:right;max-width:100%;outline:0;text-align:right;text-decoration:none;width:auto" /></a></td>
+																											<!-- facebook fim --><!-- twitter in�cio -->
+																											<td style="-moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;hyphens:none;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-break:keep-all;word-wrap:break-word"><a href="https://twitter.com/agoracorretora" style="Margin:0;color:#2199e8;font-family:Arial,Helvetica,sans-serif;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left;text-decoration:none" target="_blank"><img class="small-float-center float-right" src="https://www.agorainvest.com.br/uploads/comunicacoes/mk/padrao2019/new/twitter_logo.png" style="-ms-interpolation-mode:bicubic;border:none;clear:both;display:block;float:right;max-width:100%;outline:0;text-align:right;text-decoration:none;width:auto" /></a></td>
+																											<!-- twitter fim --><!-- sound inicio -->
+																											<td style="-moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;hyphens:none;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-break:keep-all;word-wrap:break-word"><a href="https://soundcloud.com/agorainvestimentos" style="Margin:0;color:#2199e8;font-family:Arial,Helvetica,sans-serif;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left;text-decoration:none" target="_blank"><img class="small-float-center float-right" src="" style="-ms-interpolation-mode:bicubic;border:none;clear:both;display:block;float:right;max-width:100%;outline:0;text-align:left;text-decoration:none;width:auto;" /></a></td>
+																											<!-- sound fim --><!-- ticktok in�cio -->
+																											<td style="-moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;hyphens:none;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-break:keep-all;word-wrap:break-word"><a href="https://vm.tiktok.com/JRYeWVb/" style="Margin:0;color:#2199e8;font-family:Arial,Helvetica,sans-serif;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left;text-decoration:none" target="_blank"><img class="small-float-center float-right" src="https://www.agorainvest.com.br/uploads/comunicacoes/mk/email-203/assets/ticktock.png" style="-ms-interpolation-mode:bicubic;border:none;clear:both;display:block;float:right;max-width:100%;outline:0;text-align:right;text-decoration:none;width:55%" /></a></td>
+																											<!-- ticktok fim --><!-- spot inicio -->
+																											<td style="-moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;hyphens:none;line-height:1.3;margin:0;padding:0;text-align:left;vertical-align:top;word-break:keep-all;word-wrap:break-word"><a href=" https://open.spotify.com/show/5gvqjgYdP2qtdeV2urMVlu?si=x5F1PswWQUqWOsAV3ur28w" style="Margin:0;color:#2199e8;font-family:Arial,Helvetica,sans-serif;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left;text-decoration:none" target="_blank"><img class="small-float-center float-right" src="https://www.agorainvest.com.br/uploads/comunicacoes/mk/email-203/assets/spotfy.png" style="-ms-interpolation-mode:bicubic;border:none;clear:both;display:block;float:right;max-width:100%;outline:0;text-align:right;text-decoration:none;width: 42%;margin-top: 3px!important;" /></a></td>
+																											<!-- spot fim -->
+																										</tr>
+																									</tbody>
+																								</table>
+																								</th>
+																							</tr>
+																						</tbody>
+																					</table>
+																					</th>
+																				</tr>
+																			</tbody>
+																		</table>
+																		<!-- contatos in�cio -->
+
+																		<table class="spacer am-comp-footer--div" style="border-bottom:1px solid #ccc;border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+																			<tbody>
+																				<tr style="padding:0;text-align:left;vertical-align:top">
+																					<td height="32px" style="-moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:32px;font-weight:400;hyphens:none;line-height:32px;margin:0;mso-line-height-rule:exactly;padding:0;text-align:left;vertical-align:top;word-break:keep-all;word-wrap:break-word">&nbsp;</td>
+																				</tr>
+																			</tbody>
+																		</table>
+
+																		<table class="row" style="border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+																			<tbody>
+																				<tr style="padding:0;text-align:left;vertical-align:top">
+																					<th class="small-12 large-7 columns first" style="Margin:0 auto;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:12px;padding-right:6px;text-align:left;width:338px">
+																					<table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+																						<tbody>
+																							<tr style="padding:0;text-align:left;vertical-align:top">
+																								<th style="Margin:0;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left"><a href="https://www.agorainvestimentos.com.br" style="Margin:0;color:#2199e8;font-family:Arial,Helvetica,sans-serif;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left;text-decoration:none" target="_blank"><img class="float-left" src="https://www.agorainvest.com.br/uploads/comunicacoes/mk/padrao2019/new/footer_pt3.png" style="-ms-interpolation-mode:bicubic;border:none;clear:both;display:block;float:left;max-width:100%;outline:0;text-align:left;text-decoration:none;width:auto" /></a></th>
+																							</tr>
+																						</tbody>
+																					</table>
+																					</th>
+																					<th class="small-12 large-5 columns last" style="Margin:0 auto;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:6px;padding-right:12px;text-align:left;width:238px" valign="bottom">
+																					<table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+																						<tbody>
+																							<tr style="padding:0;text-align:left;vertical-align:top">
+																								<th style="Margin:0;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left"><a href="https://www.agorainvestimentos.com.br" style="Margin:0;color:#2199e8;font-family:Arial,Helvetica,sans-serif;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left;text-decoration:none" target="_blank"><img class="float-left" src="https://www.agorainvest.com.br/uploads/comunicacoes/mk/padrao2019/new/footer_pt4.png" style="-ms-interpolation-mode:bicubic;border:none;clear:both;display:block;float:left;max-width:100%;outline:0;text-align:left;text-decoration:none;width:auto" /></a></th>
+																							</tr>
+																						</tbody>
+																					</table>
+																					</th>
+																				</tr>
+																			</tbody>
+																		</table>
+																		<!-- contatos fim -->
+
+																		<table class="spacer" style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+																			<tbody>
+																				<tr style="padding:0;text-align:left;vertical-align:top">
+																					
+																				</tr>
+																			</tbody>
+																		</table>
+
+																		<table class="row" style="border-collapse:collapse;border-spacing:0;display:table;padding:0;position:relative;text-align:left;vertical-align:top;width:100%">
+																			<tbody>
+																				<tr style="padding:0;text-align:left;vertical-align:top"><!-- disclaimer in�cio -->
+																					<th class="small-12 large-12 columns first last" style="Margin:0 auto;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0 auto;padding:0;padding-bottom:0;padding-left:12px;padding-right:12px;text-align:left;width:588px">
+																					<table style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+																						<tbody>
+																							<tr style="padding:0;text-align:left;vertical-align:top">
+																								<th style="Margin:0;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0;text-align:left">
+																								<table class="spacer" style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+																									<tbody>
+																										<tr style="padding:0;text-align:left;vertical-align:top">
+																											<td height="10px" style="-moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:400;hyphens:none;line-height:10px;margin:0;mso-line-height-rule:exactly;padding:0;text-align:left;vertical-align:top;word-break:keep-all;word-wrap:break-word">&nbsp;</td>
+																										</tr>
+																									</tbody>
+																								</table>
+																								<br> <br>
+
+																								<p class="am-comp-footer--text" style="Margin:0;Margin-bottom:0;color:#A8A8A8;font-family:Arial,Helvetica,sans-serif;font-size:10px;font-weight:400;line-height:1.3;margin:0;margin-bottom:0;padding:0;text-align:left">Este e-mail &eacute; autom&aacute;tico. Favor n&atilde;o responder solicitando outras informa&ccedil;&otilde;es ou sugest&otilde;es relacionadas ao nosso servi&ccedil;o. Para isso fale com o <span style="color:#000">Atendimento &Aacute;gora</span> no nosso site.<br />
+																								<br />
+																								Caso n&atilde;o queira mais receber e-mails como este, acesse o site da &Aacute;gora e altere as configura&ccedil;&otilde;es de recebimento na <a href="https://www.agorainvestimentos.com.br/login/?origem=https://www.agorainvest.com.br/cliente/cadastro/central-de-emails.asp" target="_blank">central de comunica&ccedil;&atilde;o.</a><br />
+																								<br />
+																								Oferta válida para operações à vista e Day trade realizadas pelo app e pelo Home Broker (site)  da Ágora apenas no dia 26/11/2021.
+
+<br />
+																								<br />
+																								Este material é destinado a investidores residentes fiscais no Brasil. Se tiver recebido o conteúdo de terceiros não vinculados à Ágora, por favor, desconsidere seu teor. Investimentos estão sujeitos a oscilação de preços, podendo resultar em perdas patrimoniais decorrentes dos riscos a que estão expostos. Consulte os riscos da operação e a compatibilidade com seu perfil antes de investir. A decisão de negociar qualquer ativo é exclusivamente do cliente, observando seu perfil. Rentabilidade passada não é garantia de rentabilidade futura. O presente material é de uso exclusivo do seu destinatário, não podendo ser, no todo ou em parte, copiado, reproduzido ou distribuído a qualquer pessoa sem a autorização da Ágora.</p>
+																								</th>
+																								<th class="expander" style="Margin:0;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:400;line-height:1.3;margin:0;padding:0!important;text-align:left;visibility:hidden;width:0">&nbsp;</th>
+																							</tr>
+																						</tbody>
+																					</table>
+																					</th>
+																					<!-- disclaimer fim -->
+																				</tr>
+																			</tbody>
+																		</table>
+
+																		<table class="spacer" style="border-collapse:collapse;border-spacing:0;padding:0;text-align:left;vertical-align:top;width:100%">
+																			<tbody>
+																				<tr style="padding:0;text-align:left;vertical-align:top">
+																					<td height="32px" style="-moz-hyphens:none;-ms-hyphens:none;-webkit-hyphens:none;Margin:0;border-collapse:collapse!important;color:#0a0a0a;font-family:Arial,Helvetica,sans-serif;font-size:32px;font-weight:400;hyphens:none;line-height:32px;margin:0;mso-line-height-rule:exactly;padding:0;text-align:left;vertical-align:top;word-break:keep-all;word-wrap:break-word">&nbsp;</td>
+																				</tr>
+																			</tbody>
+																		</table>
+																		</td>
+																	</tr>
+																</tbody>
+															</table>
+															<!-- comp-footer fim --></th>
+														</tr>
+													</tbody>
+												</table>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+									<!-- prevent Gmail on iOS font size manipulation -->
+
+									<div style="display:none;white-space:nowrap;font:15px courier;line-height:0">&nbsp;</div>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			</center>
+			</td>
+		</tr>
+	</tbody>
+</table>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam-cell.nr-data.net","licenseKey":"aece2c08f5","applicationID":"22912202","transactionName":"ZgMBMkBYDRcCARVQC19JIBNBTQwJTA8AUAhuAQYS","queueTime":0,"applicationTime":338,"atts":"SkQCRAhCHhk=","errorBeacon":"bam-cell.nr-data.net","agent":""}</script></body>
+</html>
